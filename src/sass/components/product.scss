@@ -1,3 +1,84 @@
-h1{
-    color: red;
+@import '../variables.scss';
+@import './addToCart.scss';
+
+.product{
+    font-family: $fontFamily;
+    .container{
+        max-height: 400px;
+        width: 100%;
+        .rec-arrow-right, .rec-arrow-left {
+            position: absolute;
+            z-index: 1;
+            background-color: $arrowCarousel;
+            &:hover{
+                background-color: $arrowCarouselHover;
+            }
+        }
+        .rec-arrow-right{
+            right: 2px;
+        }.rec-arrow-left{
+            left: 2px;
+        }
+        .rec-pagination{
+            position: absolute;
+            .rec-dot_active{
+                background-color: $arrowCarouselHover;
+                box-shadow: 0 0 1px 3px red; /////////////////////// MUDAR VARIAVEL
+            }
+        }
+        .rec-slider-container{
+            padding: 0;
+            margin: 0;
+        }
+        img{
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+        }
+    }
+    
+    .information{
+        margin-top: 10px;
+        margin: 5px 0 0 20px;
+        h1{
+            font-size: 1.3em;
+            margin: 10px 0 5px 0;
+        }
+        p:nth-child(2){
+            font-size: 0.9em;
+            color: $description;
+            margin-right: 20px;
+        }
+        p:nth-child(3){
+            margin: 10px 0;
+            font-size: 0.8em;
+            color: $priceProduct;
+            font-weight: 600;
+        }
+        .observation{
+            display: flex;
+            flex-direction: column;
+            p{
+                display: flex;
+                align-items: center;
+                font-weight: 400;
+                color: gray; ///////////////////////////////////// MUDAR VARIAVEL
+                svg{
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+            input{
+                border: 1px solid rgba(0, 0, 0, 0.148); ///////////////////////////////////// MUDAR VARIAVEL
+                height: 30px;
+                margin: 10px 20px 0 0;
+                margin-right: 20px;
+                text-indent: 10px;
+                border-radius: 5px;
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
+    }
 }
