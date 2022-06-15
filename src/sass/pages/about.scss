@@ -1,0 +1,56 @@
+@import '../variables.scss';
+
+.about{
+    font-family: $fontFamily;
+    hr{
+        width: 95%;
+        margin: 10px auto;
+    }
+    .social-media{
+        margin: 10px 20px;
+        .instagram,.whatsapp{
+            display: flex;
+            justify-content: space-between;
+            text-decoration: none;
+            color: black; //////////////////////////// MUDAR VARIAVEL
+            div{
+                display: flex;
+                flex-direction: column;
+                span{
+                    &:nth-child(1){
+                        margin-bottom: 2px;
+                    }
+                }
+            }
+            img{
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+    .schedule{
+        margin: 0 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .location{
+        margin: 0 20px;
+        display: flex;
+        flex-direction: column;
+        span{
+
+        }
+    }
+    .social-media, .schedule, .location{
+        span:nth-child(1){
+            font-size: 1em;
+            font-weight: 600;
+            color: $headerBg;
+        }
+    }
+}
+
+#map{
+    height: 350px;
+    width: 100%;
+}
