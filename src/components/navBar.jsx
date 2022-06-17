@@ -1,26 +1,29 @@
-import '../sass/components/navBar.scss'
+import { Link } from 'react-router-dom';
+
+import '../sass/components/navBar.scss';
+
 
 const NavBar = () => {
     return (
         <nav className="nav-bar">
-            <a href="#">
+            <Link to='/'>
                 <span class="material-symbols-outlined">
                     restaurant_menu
                 </span>
                 Cardápio
-            </a>
-            <a href="#">
+            </Link>
+            <Link to='/shopping_cart'>
                 <span class="material-symbols-outlined">
                     shopping_cart_checkout
                 </span>
                 Carrinho
-            </a>
-            <a href="#">
+            </Link>
+            <Link to='/about'>
                 <span class="material-symbols-outlined">
                     more_horiz
                 </span>
                 Informações
-            </a>
+            </Link>
         </nav>
     );
 }
