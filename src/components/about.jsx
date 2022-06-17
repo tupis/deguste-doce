@@ -1,46 +1,7 @@
-import { useEffect } from 'react';
 import '../sass/pages/about.scss'
-import NavBar from './navBar';
-// import axios from "axios";
-
-
-
-const baseUrl = "https://maps.googleapis.com/maps/api/js?key=AIzaSyA3fw0LJXfQ87FtMSvqLdy5wGCKhjZkmLA&callback=initMap"
+import Map from './map'
 
 const About = () => {
-    
-    useEffect(() => {   //Consumir script externo
-        const script = document.createElement("script");
-        script.type = "text/javascript";
-        script.id = "getSelo";
-        script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyA3fw0LJXfQ87FtMSvqLdy5wGCKhjZkmLA&callback=initMap";
-        script.async = true;
-        document.body.appendChild(script);
-
-        /* axios.get(baseUrl) // consertar depois
-            .then(() =>{
-                function initMap() {
-                    const uluru = { lat: -2.537157, lng: -44.294482 };
-                    const map = new google.maps.Map(document.getElementById("map"), {
-                      zoom: 18,
-                      center: uluru,
-                    });
-                    const marker = new google.maps.Marker({
-                      position: uluru,
-                      map: map,
-                    });
-                  }
-                  window.initMap = initMap;
-                console.log('SIM, CONSUMIU')
-            })
-            .catch(() => {
-                console.log('não consumiu')
-            })
-        return () => {
-            document.body.removeChild(script)
-        }; */
-      }, []);
-
     return (
         <div className="about">
             <header className='header'>
@@ -71,11 +32,10 @@ const About = () => {
             </div>
             <div className="location">
                 <span>Endereço:</span>
-                <span>Rua Caminho da Boiada, 224 - Centro, 65025-200</span>
+                <span>Rua Caminho da Boiada, 221 - Centro, 65025-200</span>
                 <hr />
             </div>
-            <div id="map"></div>
-            < NavBar /> 
+            < Map />
         </div>
     );
 }
