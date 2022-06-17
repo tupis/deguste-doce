@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0");
+
+@import '../variables.scss';
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 700,
+  'opsz' 48;
+  font-size: 2.5em;
+}
+
+.products{
+  .cards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    row-gap: 10px;
+    filter: drop-shadow(1px 1px 10px rgba(0, 0, 0, 0.217));
+    
+    .wrapper-card{
+      text-decoration: none;
+      .card{
+        max-width: 180px;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        img{
+          width: 100%;
+          height: auto;
+          max-height: 180px;
+          max-width: 180px;
+          border-radius: 20px;
+          //img 180px por 180px
+        }
+        .card-information{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          font-family: $fontFamily;
+          background-color: rgb(255, 255, 255); ///////////////////////////////////// MUDAR VARIAVEL
+          width: 100%;
+          border-radius: 0 0 20px 20px ;
+          position: absolute;
+          bottom: 1px;
+          padding: 15px 0;
+          text-indent: 7px;
+          
+          h1{
+            color: $headerBg;
+            font-size: 1.2em;
+            max-width: 200px;
+            margin-bottom: 5px;
+          }
+          p{
+            text-align: start;
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}
