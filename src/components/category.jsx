@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 const Category = ( { category } ) => {
 
     let categoryName = ''
-    
     if(category.name){
         categoryName = `/${(category.name).toLowerCase().replace(' ','')}`
     }
@@ -19,7 +18,10 @@ const Category = ( { category } ) => {
                 </div>
                 <div className='images-category'>
                     {
-                        Object.keys(category.products).map((product) => <img key={category.products} src='https://via.placeholder.com/50px' alt={`${product}`}/>)
+                        Object.values(category.products).map((product) => 
+                        < Link to={`/product/${product._id}`}>
+                            <img key={category.products} src={product.images[0]} alt={`${product}`}/>
+                        </Link>)
                     }
                 </div>
                 <hr />
