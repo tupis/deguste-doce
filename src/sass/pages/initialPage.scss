@@ -18,6 +18,10 @@
     font-weight: 800;
     text-indent: 10px;
     color: white; ///////////////////////////////////// MUDAR VARIAVEL
+    a{
+        text-decoration: none;
+        color: white;
+    }
     h1{
         font-size: 2.5em
     }
@@ -45,11 +49,17 @@
     }
     .images-category{
         margin-bottom: 10px;
+        display: flex;
         img{
-            border-radius: 50%;
+            border-radius: 15px;
             margin: 0 10px;
             height: 70px;
             width: 70px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            text-align: center;
         }
     }
     hr{
