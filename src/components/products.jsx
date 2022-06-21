@@ -1,77 +1,22 @@
 import '../sass/pages/products.scss'
 import Card from './card';
+import { Link } from 'react-router-dom'
 
-const category = {
-    bolos: {
-        name: "Bolos",
-        products: {
-            umKG: {
-                name: "Bolo 1KG",
-                description: "Contem pasta americana",
-                price: 50,
-                images: ['img1', 'img2']
-            },
-            cincoKG: {
-                name: "Bolo 5KG",
-                description: "Não contém pasta americana",
-                price: 120,
-                images: ['img1', 'img2']
-            },
-            dezKG: {
-                name: "Bolo 10KG",
-                description: "Não contém pasta americana",
-                price: 300,
-                images: ['img1', 'img2']
-            }
-        }
-    },
-    doces: {
-        name: "Doces",
-        products: {
-            brigadeiro: {
-                name: 'Brigadeiro',
-                description: 'Brigadeiro',
-                price: 1
-  
-            },
-            cupcake: {
-                name: "Cupcake",
-                description: "os sabores são variados",
-                price: 20
-            }
-        }
-    },
-    salgados: {
-        name: 'Salgados',
-        products: {
-            centroSalgados: {
-                name: "Centro de Salgados",
-                description: "Você escolhe os tipos de salgados",
-                price: 120
-            },
-            meioSalgados: {
-                name: "Metade de um centro de Salgados",
-                description: "Você escolhe os tipos de salgados",
-                price: 60
-            }
-        }
-    },
-  }
-
-const Products = () => {
+const Products = ( {category} ) => {
     return (
         <div className="products">
             <div className="header">
-                <span class="material-symbols-outlined">
-                    arrow_back_ios
-                </span>
+                < Link to="/">
+                    <span class="material-symbols-outlined">
+                        arrow_back_ios
+                    </span>
+                </Link>
                 <h1>Bolos</h1>
             </div>
             <div className="cards">
                 {
-                    Object.values(category.bolos.products).map((product, key) => < Card product={product} key={key}/>)
+                    Object.values(category.products).map(product => < Card product={product}/>)
                 }
-                
             </div>
         </div>
     );
