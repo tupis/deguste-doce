@@ -1,14 +1,13 @@
-import '../sass/components/buttonClose.scss'
+import '../sass/components/buttonClose.scss';
+import { Link } from 'react-router-dom';
 
-
-
-const ButtonClose = ( {handleOnClick} ) => {
+const ButtonClose = ( {back} ) => {
     return (
-        <button className='button-close' onClick={handleOnClick}>
+        <Link className='button-close' to={back}>
             <span className="material-symbols-outlined">
                 Close
             </span>
-        </button>
+        </Link>
     );
 }
  
