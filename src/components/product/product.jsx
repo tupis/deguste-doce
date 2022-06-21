@@ -1,30 +1,16 @@
 //Style
-import '../../sass/components/product.scss'
-
-//Image Test
-import Img1 from '../../images/img1.png'
-import Img2 from '../../images/img2.png'
-    // images sempre de 1:1
+import '../../sass/components/product.scss';
 
 //Components
-import AddToCart from './layout/addToCart'
-import CarouselImages from './layout/carrousel'
-import Information from '../information'
-import ButtonClose from '../buttonClose'
+import AddToCart from './layout/addToCart';
+import CarouselImages from './layout/carrousel';
+import Information from '../information';
+import ButtonClose from '../buttonClose';
 
-//Fake api
-const product = {
-    name: 'Bolo 10KG',
-    price: 300,
-    description: 'Contém pasta americana, e pasta de amendoim',
-    images: [Img1, Img2, Img1]
-}
-
-const Product = () => {
-
+const Product = ( {product, back} ) => {
     return ( 
         <div className="product">
-            <ButtonClose handleOnClick={()=>console.log("Voltou")}/>
+            <ButtonClose back={back}/>
             <CarouselImages images={product.images} />
             <Information product={product} />
             <AddToCart price={product.price}/>
