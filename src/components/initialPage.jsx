@@ -8,7 +8,7 @@ const InitialPage = ({category}) => {
             <h1>Deguste Doce</h1>
         </header>
         {
-            Object.values(category).map((category, keys) => < Category category={category}/>)
+            Object.values(category).map((category) => < Category category={category}/>)
         }
         </>
     );
