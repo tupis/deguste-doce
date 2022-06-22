@@ -1,0 +1,49 @@
+@import '../variables.scss';
+
+.shopping-cart {
+    font-family: $fontFamily;
+    .title{
+        background-color: red;
+    }
+    .cartItem {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 90%;
+        margin: auto;
+        .wrapper-product{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .wrapper-title-qtd{
+                display: flex;
+                .quantity{
+                    font-weight: 500;
+                    margin-right: 10px;
+                }
+                .title-product{
+                    text-transform: uppercase;
+                    font-size: 1.2em;
+                    font-weight: 500;
+                }
+            }
+            .btn-remove{
+                display: flex;
+                align-items: center;                
+                border: none;
+                border-radius: 5px;
+                padding: 10px;
+                background-color: $buttonColorBuy;
+                font-weight: 550;
+                font-size: 1.3em;
+            }
+        }
+        .subtotal-product{
+            font-size: 1.3em;
+            font-weight: 700;
+        }
+    }
+    hr{
+        margin: 7px 0;
+    }
+}
