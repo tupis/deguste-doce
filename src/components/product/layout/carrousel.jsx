@@ -8,7 +8,7 @@ const CarouselImages = ( {images} ) => {
         <div className="container">
             <div className="carousel-wrapper">
                 < Carousel breakPoints={breakPoints}>
-                    {images.map(image => <img src={image} alt='Imagem do produto'/>)}
+                    {images.map((image, key) => <img src={image} alt='Imagem do produto' key={key} />)}
                 </ Carousel >
             </div>
         </div>
