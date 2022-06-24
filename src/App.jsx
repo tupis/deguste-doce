@@ -38,7 +38,7 @@ const App = () => {
           < Route path='/product' element={ < Product /> } />
           {
             // eslint-disable-next-line
-            Object.values(category).map(category => < Route path={`/${(category.name).toLowerCase().replace(' ','')}`} element={ < Products category={category} /> } />) 
+            Object.values(category).map((category, key) => < Route path={`/${(category.name).toLowerCase().replace(' ','')}`} element={ < Products category={category} /> } key={key} />) 
           }
           {
             Object.values(category).map(category => category.products.map(product => < Route path={`/product/${product._id}`} element={ < Product product={product} back={`/${(category.name).toLowerCase().replace(' ','')}`} /> } />))
