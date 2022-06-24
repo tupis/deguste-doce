@@ -11,8 +11,9 @@ const Cart = () => {
             <div className="header">
                 <h1>Carrinho</h1>
             </div>
-            {
-                cartItem.map(product => < CartItem product={product}/>)
+            {cartItem.length > 0 
+                ? cartItem.map(product => < CartItem product={product}/>) 
+                : <p>Por favor insira algum item no seu carrinho</p>
             }
         </div>
     );
