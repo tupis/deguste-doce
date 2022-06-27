@@ -8,7 +8,7 @@ const About = () => {
                 <h1>Informações</h1>
             </header>
            <div className="social-media">
-                <a href="#" className='whatsapp'>
+                <a href="https://api.whatsapp.com/send?phone=5598988362009" className='whatsapp'>
                     <div>
                         <span>Whatsapp</span>
                         <p>+55 (98) 9 8821-6619</p>
