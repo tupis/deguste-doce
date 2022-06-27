@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 
 //Style
 import '../../sass/components/product.scss';
@@ -14,12 +14,18 @@ const Product = ( {product, back} ) => {
 
     const { addItemCart } = useContext(CartContext);
 
+    const [inputObs, setInputObs] = useState('Sem Observação')
+
+    const inputValue = (e) => {
+        setInputObs(e.target.value)
+    }
+
     return ( 
         <div className="product">
             <ButtonClose back={back}/>
             <CarouselImages images={product.images} />
-            <Information product={product} />
-            <AddToCart product={product} addCart={addItemCart} />
+            <Information product={product} setInputObs={inputValue}/>
+            <AddToCart product={product} addCart={addItemCart} obs={inputObs}/>
         </div>
     );
 }
