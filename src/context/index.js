@@ -53,6 +53,7 @@ const CartProvider = ({ children }) => {
     const [totalProduct, setTotalProduct] = useState([]) // Recebe os valores de todos os produtos
     
     // eslint-disable-next-line
+    const [totalPrice, setTotalPrice] = useState()
 
     const addTotalPrice = (id, totalPriceProduct) => {  // Adiciona/Atualiza o preço dos produtos enviados a 'totalProduct'
         const item = totalProduct.find(product => product[0] === id);
@@ -72,12 +73,11 @@ const CartProvider = ({ children }) => {
         setTotalProduct(newArray);
     }
 
-    let totalPrice;
 
     const calcTotalPrice = () => {  // Calcula o preço total dos valores inseridos no 'totalProduct'
-        totalPrice = 0;
-        totalProduct.map(product => totalPrice += product[1]);
-        console.log(totalPrice);
+        let sumPrice = 0;
+        totalProduct.map(product => sumPrice += product[1]);
+        setTotalPrice(sumPrice)
     }
 
 
@@ -112,7 +112,7 @@ const CartProvider = ({ children }) => {
         if(!item){
             messageArray.push(message)
         }else{
-            let index = messageArray.indexOf(item)
+            let index = messageArray.indexOf(item) 
             messageArray[index][1] = `
             ${name}
             Observação: ${obs}
@@ -130,12 +130,14 @@ const CartProvider = ({ children }) => {
     }
 
     const sendToWhatsapp = () => {
+        concatMessageProducts();
         const messageFinal = initialMessage.concat(messagesProducts)  // Adiciona cabeçalho aos produtos de mensagem
     
         const URLEncoder = messageFinal.replace(/ /gmi,'%20').replace(/\s/gmi, '%0A') // Transforma mensagem Final em URLEncoder
 
         const APIWhats = `https://api.whatsapp.com/send?phone=5598991739443&text=${URLEncoder}`
-        console.log(APIWhats);
+
+        return APIWhats
     }
 
     return (
