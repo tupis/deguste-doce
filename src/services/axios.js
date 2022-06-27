@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = 'http://localhost:5000/'
+const baseUrl = 'https://deguste-doce.herokuapp.com/'
 
 const API = axios.create({
     baseURL: baseUrl,
