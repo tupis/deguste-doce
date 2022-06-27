@@ -1,0 +1,40 @@
+@import '../variables.scss';
+
+.wrapper-link-purchase{
+
+    p{
+        margin: 10px 0;
+        color: $description;
+        text-align: center;
+        padding: 0 10%;
+        span{
+            color: black;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        &:nth-child(1){
+            font-size: 1.5em;
+            color: black;
+            font-weight: 600;
+        }
+    }
+
+    .link-purchase{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-decoration: none;
+        
+        .purchase{
+            border: none;
+            background-color: $buttonColorBuy;
+            font-weight: lighter;
+            font-size: 1.5em;
+            text-transform: uppercase;
+            padding: 10px;
+            width: 90%;
+            border-radius: 20px;
+        }
+    }
+}
