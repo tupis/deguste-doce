@@ -1,4 +1,3 @@
-import '../sass/components/buttonClose.scss';
 import { Link } from 'react-router-dom';
 
 const ButtonClose = ( {back} ) => {

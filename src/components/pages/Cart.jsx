@@ -1,9 +1,8 @@
 import { useContext } from "react";
-import { CartContext } from "../context";
-import CartItem from "./cartItem";
+import { CartContext } from "../../context";
+import CartItem from "../CartItem";
 
-import '../sass/pages/cart.scss';
-import Purchase from "./purchase";
+import Purchase from "../Purchase";
 
 const Cart = () => {
     const { cartItem } = useContext(CartContext)

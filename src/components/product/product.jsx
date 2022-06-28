@@ -6,8 +6,8 @@ import '../../sass/components/product.scss';
 //Components
 import AddToCart from './layout/addToCart';
 import CarouselImages from './layout/carrousel';
-import Information from '../information';
-import ButtonClose from '../buttonClose';
+import Information from '../pages/Information';
+import ButtonClose from '../ButtonClose';
 import { CartContext } from '../../context/index';
 
 const Product = ( {product, back} ) => {

@@ -1,5 +1,4 @@
 import { useContext } from 'react';
-import '../sass/components/buttonPurchase.scss';
 import { CartContext } from "../context";
 
 const Purchase = () => {

@@ -1,5 +1,4 @@
-import '../sass/pages/initialPage.scss'
-import Category from './category';
+import Category from '../../components/Category';
 
 const InitialPage = ({category}) => {
     return (

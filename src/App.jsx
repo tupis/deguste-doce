@@ -3,18 +3,21 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import { useEffect, useState } from "react";
 
-import './sass/index.scss'
 import API from './services/axios'
 
-import InitialPage from './components/initialPage';
+import './sass/index.scss'
+
+//Components
+import InitialPage from "./components/pages/InitialPage";
 import Product from './components/product/product';
-import About from './components/about';
-import NavBar from "./components/navBar";
-import { useEffect, useState } from "react";
-import Products from './components/products';
+import About from './components/About';
+import NavBar from "./components/pages/NavBar";
+import Products from './components/pages/Products';
 import CartProvider from './context/index';
-import Cart from "./components/cart";
+import Cart from "./components/pages/Cart";
+
 
 const App = () => {
   const [category, setCategory] = useState({})

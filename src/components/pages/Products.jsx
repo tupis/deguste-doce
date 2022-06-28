@@ -1,5 +1,4 @@
-import '../sass/pages/products.scss'
-import Card from './card';
+import Card from '../Card';
 import { Link } from 'react-router-dom'
 
 const Products = ( {category} ) => {

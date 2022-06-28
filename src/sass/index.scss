@@ -3,6 +3,19 @@
     margin: 0;
 }
 
+
+//components
 @import './components/product.scss';
+@import './components/buttonPurchase.scss';
+@import './components/navBar.scss';
+@import './components/buttonClose.scss';
+
+//pages
+@import 'pages/about.scss';
+@import 'pages/cart.scss';
+@import 'pages/initialPage.scss';
+@import 'pages/products.scss';
+
+//Global
 @import './variables.scss';
-@import './mediaquires.scss';
+@import './mediaquery.scss';

@@ -29,6 +29,7 @@
 }
 
 .category{
+    box-sizing: border-box;
     .header-category{
         font-family: $fontFamily;
         display: flex;
@@ -49,6 +50,7 @@
     }
     .images-category{
         margin-bottom: 10px;
+        overflow: hidden;
         display: flex;
         img{
             border-radius: 15px;

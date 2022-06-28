@@ -1,5 +1,4 @@
-import '../sass/pages/about.scss'
-import Map from './map'
+import Map from './MapAPI'
 
 const About = () => {
     return (
@@ -16,7 +15,7 @@ const About = () => {
                     <img src="https://seeklogo.com/images/W/whatsapp-icon-logo-BDC0A8063B-seeklogo.com.png" alt="instagram-logo" />
                 </a>
                 <hr />
-                <a href="https://www.instagram.com/deguste_doces/" className="instagram" target='_blank'>
+                <a href="https://www.instagram.com/deguste_doces/" className="instagram" target='_blank' rel="noreferrer">
                     <div>
                         <span>Instagram</span>
                         <p>@deguste_doce</p>
