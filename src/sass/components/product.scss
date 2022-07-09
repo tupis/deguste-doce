@@ -9,9 +9,15 @@
             position: absolute;
             z-index: 1;
             background-color: $arrowCarousel;
+            color: #DB8E80;
             &:hover{
                 background-color: $arrowCarouselHover;
             }
+            &:hover{
+                color: white;
+            }
+            border: none;
+            box-shadow: none;
         }
         .rec-arrow-right{
             right: 2px;
@@ -22,7 +28,7 @@
             position: absolute;
             .rec-dot_active{
                 background-color: $arrowCarouselHover;
-                box-shadow: 0 0 1px 3px red; /////////////////////// MUDAR VARIAVEL
+                box-shadow: 0 0 1px 3px $paginationBorder; /////////////////////// MUDAR VARIAVEL
             }
         }
         .rec-slider-container{
@@ -35,7 +41,6 @@
             object-fit: cover;
         }
     }
-    
     .wrapper-button-product{
         display: flex;
         justify-content: center;
@@ -71,6 +76,13 @@
             }
         }
         .add-cart{
+            .material-symbols-outlined {
+                font-variation-settings:
+                'FILL' 1,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 48
+            }
             display: flex;
             justify-content: space-between;
             align-items: center;                
@@ -80,19 +92,56 @@
             border-radius: 5px;
             background-color: $buttonColorBuy;
             font-weight: 600;
+            color: white;
             .text-area{
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 margin-left: 10px;
-                svg{
+                
+                span{
+                    font-size: 1.5em;
                     margin-right: 5px;
-                    width: 18px;
-                    height: 18px;
+
                 }
             }
             p{
                 margin-right: 10px;
+            }
+        }
+        .add-cart.animation{
+            .text-area{
+                @keyframes move-cart {
+                    to{
+                        transform: translateX(600px);
+                    }
+                }
+                @keyframes hidden-text {
+                    0%{
+                        opacity: 0;
+                    }
+                    99%{
+                        opacity: 0;
+                    }
+                    100%{
+                        opacity: 1;
+                    }
+                    
+                }
+                span{
+                    animation: move-cart;
+                    animation-duration: 2000ms;
+                    animation-timing-function: ease-in-out;
+                }
+                p{
+                    animation-name: hidden-text;
+                    animation-delay: 1ms;
+                    animation-duration: 2s;
+                }
+            }
+            p{
+                animation-name: hidden-text;
+                animation-duration: 2s;
             }
         }
     }
