@@ -2,10 +2,7 @@
 
 @import '../variables.scss';
 
-.nav-bar{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.wrapper-navBar{
     position: fixed;
     width: 100%;
     bottom: 0;
@@ -13,22 +10,30 @@
     padding: 10px 0;
     border-top: 1px solid rgba(49, 49, 49, 0.251);
     z-index: 1;
-    a{
+    .title-shop{
+        display: none;
+    }
+    .nav-bar{
         display: flex;
-        flex-direction: column;
-        text-decoration: none;
+        justify-content: space-around;
         align-items: center;
-        font-family: $fontFamily;
-        color: black; ///////////////////////////////////// MUDAR VARIAVEL
-        text-transform: uppercase;
-        font-weight: 500;
-        font-size: 0.8em;
-        span{
-            font-size: 2em;
-        }
-        &:nth-child(3){
+        a{
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            align-items: center;
+            font-family: $fontFamily;
+            color: black; ///////////////////////////////////// MUDAR VARIAVEL
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 0.8em;
             span{
-                font-size: 2.2em;
+                font-size: 2em;
+            }
+            &:nth-child(3){
+                span{
+                    font-size: 2.2em;
+                }
             }
         }
     }
