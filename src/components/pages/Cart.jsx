@@ -13,7 +13,12 @@ const Cart = () => {
             </div>
             {cartItem.length > 0 
                 ? [cartItem.map(product => < CartItem product={product}/>), < Purchase /> ]
-                : <p className='add-item-cart-warning'>Por favor insira algum item no seu carrinho =(</p>
+                : <p className='add-item-cart-warning'>
+                    <span class="material-symbols-outlined">
+                        sentiment_dissatisfied
+                    </span>
+                    <p>Por favor insira algum item no seu carrinho!</p>
+                  </p>
             }
         </div>
     );
