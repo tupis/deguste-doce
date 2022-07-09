@@ -4,14 +4,13 @@ import React, { useContext, useState } from 'react';
 import '../../sass/components/product.scss';
 
 //Components
-import AddToCart from './layout/addToCart';
-import CarouselImages from './layout/carrousel';
+import AddToCart from './layout/AddToCart';
+import CarouselImages from './layout/Carrousel';
 import Information from '../pages/Information';
 import ButtonClose from '../ButtonClose';
 import { CartContext } from '../../context/index';
 
 const Product = ( {product, back} ) => {
-
     const { addItemCart } = useContext(CartContext);
 
     const [inputObs, setInputObs] = useState('Sem Observação')
@@ -21,11 +20,15 @@ const Product = ( {product, back} ) => {
     }
 
     return ( 
-        <div className="product">
-            <ButtonClose back={back}/>
-            <CarouselImages images={product.images} />
-            <Information product={product} setInputObs={inputValue}/>
-            <AddToCart product={product} addCart={addItemCart} obs={inputObs}/>
+        <div className="wrapper-product">
+            <div className="product">
+                <ButtonClose back={back}/>
+                <CarouselImages images={product.images} />
+                <div className="wrapper-info-addCart">
+                    <Information product={product} setInputObs={inputValue}/>
+                    <AddToCart product={product} addCart={addItemCart} obs={inputObs}/>
+                </div>
+            </div>
         </div>
     );
 }
