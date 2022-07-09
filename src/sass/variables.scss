@@ -1,20 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-$fontFamily: 'Roboto', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-$buttonColorBuy: #ff8251;
-$buttonColorCount: #ea1d2c;
-$buttonColorCount: #ff8251;
+
+$fontFamily: 'Inter', sans-serif;
+
+$buttonColorBuy: #DB8E80;
+$buttonColorCount: #DB8E80;
 
 $description: #717171;
 
 $priceProduct: #3e3e3e;
 
-$arrowCarousel: #ff00001b;
-$arrowCarouselHover: #ff000069;
+$arrowCarousel: #db8e8052;
+$arrowCarouselHover: #DB8E80;
 
-$pagination: #ff000069;
+$pagination: #DB8E80;
+$paginationBorder: #DB8E80;
 
-$buttonClose: #b81313;
+$buttonClose: #DB8E80;
 
 $headerBg: #DB8E80;
