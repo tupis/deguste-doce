@@ -2,6 +2,7 @@
 
 .shopping-cart {
     font-family: $fontFamily;
+    margin-bottom: 120px;
     .title{
         background-color: red;
     }
@@ -34,17 +35,31 @@
                 border-radius: 5px;
                 padding: 10px;
                 background-color: $buttonColorBuy;
-                font-weight: 550;
                 font-size: 1.3em;
+                color: white;
             }
         }
         .subtotal-product{
             font-size: 1.3em;
-            font-weight: 700;
+            font-weight: 600;
         }
     }
     .add-item-cart-warning{
-        text-align: center;
+        display: flex;
+        place-items: center;
+        flex-direction: column;
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 100,
+            'GRAD' 0,
+            'opsz' 48;
+            font-size: 10em;
+        }
+    }
+    .purchase{
+        font-weight: 100;
+        color: white;
     }
     hr{
         margin: 7px 0;
