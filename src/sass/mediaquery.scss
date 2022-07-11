@@ -20,11 +20,9 @@ $grid-screen5: 1400px;
     }
     .wrapper-product{
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       align-items: center;
       width: 100%;
-      height: 100vh;
-      margin-top: -150px;
       
       .product{
         display: flex;
@@ -126,6 +124,11 @@ $grid-screen5: 1400px;
             }
           }
         }
+      }
+      .wrapper-options{
+        width: 100%;
+        margin: 0 0;
+        padding: 0;
       }
     }
   }
