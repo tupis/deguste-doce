@@ -42,7 +42,7 @@ const App = () => {
             Object.values(category).map((category, key) => < Route path={`/${(category.name).toLowerCase().replace(' ','')}`} element={ < Products category={category} /> } key={key} />) 
           }
           {
-            Object.values(category).map((category, key) => category.products.map(product => < Route path={`/product/${product._id}`} element={ < Product product={product} back={`/${(category.name).toLowerCase().replace(' ','')}`} /> } key={key} />))
+            Object.values(category).map((category, key) => category.products.map(product => < Route path={`/product/${product._id}`} element={ < Product options={category.options} product={product} back={`/${(category.name).toLowerCase().replace(' ','')}`} /> } key={key} />))
           }
         </Routes>
       </CartProvider>
