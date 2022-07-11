@@ -1,192 +1,207 @@
 @import '../variables.scss';
 
-.product{
-    font-family: $fontFamily;
-    .container{
-        max-height: 400px;
-        width: 100%;
-        .rec-arrow-right, .rec-arrow-left {
-            position: absolute;
-            z-index: 1;
-            background-color: $arrowCarousel;
-            color: #DB8E80;
-            &:hover{
-                background-color: $arrowCarouselHover;
-            }
-            &:hover{
-                color: white;
-            }
-            border: none;
-            box-shadow: none;
-        }
-        .rec-arrow-right{
-            right: 2px;
-        }.rec-arrow-left{
-            left: 2px;
-        }
-        .rec-pagination{
-            position: absolute;
-            .rec-dot_active{
-                background-color: $arrowCarouselHover;
-                box-shadow: 0 0 1px 3px $paginationBorder; /////////////////////// MUDAR VARIAVEL
-            }
-        }
-        .rec-slider-container{
-            padding: 0;
-            margin: 0;
-        }
-        img{
-            width: 100%;
+.wrapper-product{
+    .product{
+        font-family: $fontFamily;
+        .container{
             max-height: 400px;
-            object-fit: cover;
-        }
-    }
-    .wrapper-button-product{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-weight: 600;
-        position: fixed;
-        width: 100%;
-        bottom: 0px;
-        background-color: white; ///////////////////////////////////// MUDAR VARIAVEL
-        padding: 10px 0;
-        border-top: 1px solid rgba(49, 49, 49, 0.251); ///////////////////////////////////// MUDAR VARIAVEL
-        z-index: 2;
-        .count-product{
-            display: flex;
-            margin-right: 10px;
-            button{
-                color: $buttonColorCount;
-                padding: 10px;
+            width: 100%;
+            .rec-arrow-right, .rec-arrow-left {
+                position: absolute;
+                z-index: 1;
+                background-color: $arrowCarousel;
+                color: #DB8E80;
+                &:hover{
+                    background-color: $arrowCarouselHover;
+                }
+                &:hover{
+                    color: white;
+                }
                 border: none;
-                outline: none;
-                &:nth-child(2){
-                    color: black; ///////////////////////////////////// MUDAR VARIAVEL
+                box-shadow: none;
+            }
+            .rec-arrow-right{
+                right: 2px;
+            }.rec-arrow-left{
+                left: 2px;
+            }
+            .rec-pagination{
+                position: absolute;
+                .rec-dot_active{
+                    background-color: $arrowCarouselHover;
+                    box-shadow: 0 0 1px 3px $paginationBorder; /////////////////////// MUDAR VARIAVEL
                 }
-                &:nth-child(1), &:nth-child(3){
-                    font-size: 1.2em;
-                } 
-                &:nth-child(1){
-                    border-radius: 10px 0 0 10px;
-                }
-                &:nth-child(3){
-                    border-radius: 0 10px 10px 0;
-                }
+            }
+            .rec-slider-container{
+                padding: 0;
+                margin: 0;
+            }
+            img{
+                width: 100%;
+                max-height: 400px;
+                object-fit: cover;
             }
         }
-        .add-cart{
-            .material-symbols-outlined {
-                font-variation-settings:
-                'FILL' 1,
-                'wght' 400,
-                'GRAD' 0,
-                'opsz' 48
-            }
+        .wrapper-button-product{
             display: flex;
-            justify-content: space-between;
-            align-items: center;                
-            width: 70%;
-            padding: 15px 0;
-            border: none;
-            border-radius: 5px;
-            background-color: $buttonColorBuy;
+            justify-content: center;
+            align-items: center;
             font-weight: 600;
-            color: white;
-            .text-area{
+            position: fixed;
+            width: 100%;
+            bottom: 0px;
+            background-color: white; ///////////////////////////////////// MUDAR VARIAVEL
+            padding: 10px 0;
+            border-top: 1px solid rgba(49, 49, 49, 0.251); ///////////////////////////////////// MUDAR VARIAVEL
+            z-index: 2;
+            .count-product{
                 display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-left: 10px;
-                
-                span{
-                    font-size: 1.5em;
-                    margin-right: 5px;
-
-                }
-            }
-            p{
                 margin-right: 10px;
+                button{
+                    color: $buttonColorCount;
+                    padding: 10px;
+                    border: none;
+                    outline: none;
+                    &:nth-child(2){
+                        color: black; ///////////////////////////////////// MUDAR VARIAVEL
+                    }
+                    &:nth-child(1), &:nth-child(3){
+                        font-size: 1.2em;
+                    } 
+                    &:nth-child(1){
+                        border-radius: 10px 0 0 10px;
+                    }
+                    &:nth-child(3){
+                        border-radius: 0 10px 10px 0;
+                    }
+                }
             }
-        }
-        .add-cart.animation{
-            .text-area{
-                @keyframes move-cart {
-                    to{
-                        transform: translateX(600px);
-                    }
+            .add-cart{
+                .material-symbols-outlined {
+                    font-variation-settings:
+                    'FILL' 1,
+                    'wght' 400,
+                    'GRAD' 0,
+                    'opsz' 48
                 }
-                @keyframes hidden-text {
-                    0%{
-                        opacity: 0;
-                    }
-                    99%{
-                        opacity: 0;
-                    }
-                    100%{
-                        opacity: 1;
-                    }
+                display: flex;
+                justify-content: space-between;
+                align-items: center;                
+                width: 70%;
+                padding: 15px 0;
+                border: none;
+                border-radius: 5px;
+                background-color: $buttonColorBuy;
+                font-weight: 600;
+                color: white;
+                .text-area{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-left: 10px;
                     
+                    span{
+                        font-size: 1.5em;
+                        margin-right: 5px;
+    
+                    }
                 }
-                span{
-                    animation: move-cart;
-                    animation-duration: 2000ms;
-                    animation-timing-function: ease-in-out;
+                p{
+                    margin-right: 10px;
+                }
+            }
+            .add-cart.animation{
+                .text-area{
+                    @keyframes move-cart {
+                        to{
+                            transform: translateX(600px);
+                        }
+                    }
+                    @keyframes hidden-text {
+                        0%{
+                            opacity: 0;
+                        }
+                        99%{
+                            opacity: 0;
+                        }
+                        100%{
+                            opacity: 1;
+                        }
+                        
+                    }
+                    span{
+                        animation: move-cart;
+                        animation-duration: 2000ms;
+                        animation-timing-function: ease-in-out;
+                    }
+                    p{
+                        animation-name: hidden-text;
+                        animation-delay: 1ms;
+                        animation-duration: 2s;
+                    }
                 }
                 p{
                     animation-name: hidden-text;
-                    animation-delay: 1ms;
                     animation-duration: 2s;
                 }
             }
-            p{
-                animation-name: hidden-text;
-                animation-duration: 2s;
+        }
+        .information{
+            margin-top: 10px;
+            margin: 5px 0 0 20px;
+            h1{
+                font-size: 1.3em;
+                margin: 10px 0 5px 0;
+            }
+            p:nth-child(2){
+                font-size: 0.9em;
+                color: $description;
+                margin-right: 20px;
+            }
+            p:nth-child(3){
+                margin: 10px 0;
+                font-size: 0.8em;
+                color: $priceProduct;
+                font-weight: 600;
+            }
+            .observation{
+                display: flex;
+                flex-direction: column;
+                p{
+                    display: flex;
+                    align-items: center;
+                    font-weight: 400;
+                    color: gray; ///////////////////////////////////// MUDAR VARIAVEL
+                    svg{
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+                input{
+                    border: 1px solid rgba(0, 0, 0, 0.148); ///////////////////////////////////// MUDAR VARIAVEL
+                    height: 30px;
+                    margin: 10px 20px 0 0;
+                    margin-right: 20px;
+                    text-indent: 10px;
+                    border-radius: 5px;
+                    &:focus{
+                        outline: none;
+                    }
+                }
             }
         }
     }
-
-    .information{
-        margin-top: 10px;
-        margin: 5px 0 0 20px;
-        h1{
+    .wrapper-options{
+        .option{
+            background-color: $headerBg;
+            border-radius: 5px;
+            margin: 10px auto;
+            color: white;
+            width: 93%;
             font-size: 1.3em;
-            margin: 10px 0 5px 0;
-        }
-        p:nth-child(2){
-            font-size: 0.9em;
-            color: $description;
-            margin-right: 20px;
-        }
-        p:nth-child(3){
-            margin: 10px 0;
-            font-size: 0.8em;
-            color: $priceProduct;
-            font-weight: 600;
-        }
-        .observation{
-            display: flex;
-            flex-direction: column;
-            p{
-                display: flex;
-                align-items: center;
-                font-weight: 400;
-                color: gray; ///////////////////////////////////// MUDAR VARIAVEL
-                svg{
-                    width: 20px;
-                    height: 20px;
-                }
-            }
+            padding: 5px 0;
             input{
-                border: 1px solid rgba(0, 0, 0, 0.148); ///////////////////////////////////// MUDAR VARIAVEL
-                height: 30px;
-                margin: 10px 20px 0 0;
-                margin-right: 20px;
-                text-indent: 10px;
-                border-radius: 5px;
-                &:focus{
-                    outline: none;
-                }
+                margin: 0 5px 0 10px;           
             }
         }
     }
