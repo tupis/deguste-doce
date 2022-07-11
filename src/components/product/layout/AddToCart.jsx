@@ -1,7 +1,7 @@
 import { useContext, useState, useEffect } from "react"
 import { CartContext } from "../../../context"
 
-const AddToCart = ( {product, addCart, obs} ) => {
+const AddToCart = ( {product, addCart, obs, option} ) => {
 
     const [count, setCount] = useState(1)
     const [totalPriceProduct, setTotalPriceProduct] = useState(product.price)
@@ -33,11 +33,10 @@ const AddToCart = ( {product, addCart, obs} ) => {
     const handleOnClick = () => {
         addTotalPrice(product._id, totalPriceProduct);
         addCart(product._id, count, totalPriceProduct);
-        addMessageToArray(product.name, count, obs , product._id);
+        addMessageToArray(product.name, count, obs , product._id, option);
         animationAddCart();
     }
 
-    
     useEffect(() => {
         setTotalPriceProduct(count * product.price);
     },[count])
