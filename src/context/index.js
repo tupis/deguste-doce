@@ -99,13 +99,14 @@ const CartProvider = ({ children }) => {
         concatMessageProducts();
     }
     
-    const addMessageToArray = (name, qtd, obs, id) => { // Adiciona/Atualiza uma mensagem com identificador no messageArray
+    const addMessageToArray = (name, qtd, obs, id, option) => { // Adiciona/Atualiza uma mensagem com identificador no messageArray
         let message = [
             id,
             `
             ${name}
             Observação: ${obs}
             Quantidade: ${qtd}
+            Opção: ${option}
             `
         ];
         const item = messageArray.find(product => product[0] === id);
@@ -147,4 +148,4 @@ const CartProvider = ({ children }) => {
     );
 }
 
-export default CartProvider;
+export default CartProvider;com
