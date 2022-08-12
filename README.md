@@ -69,7 +69,7 @@ $ npm start
 
 Principais tecnologia usada neste projeto
 
-* [JavaScript](O framework web usado) - Linguagem de programação
+* [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript) - Linguagem de programação
 * [React](https://pt-br.reactjs.org/docs/getting-started.html) - A biblioteca web usada
 * [Sass](https://sass-lang.com/documentation/) - Pré processador CSS
 * [Elastic-Carousel](https://www.npmjs.com/package/react-elastic-carousel) - Biblioteca que gera carrosel
